@@ -1,0 +1,20 @@
+<main>
+    <p>All these people have said NO to pineapple on pizza
+        {{#each signees}}
+            <p>
+                {{#if url}}
+                    <a href="http://{{url}}">{{first_name}} {{last_name}}</a>
+                {{else}}
+                    {{first_name}} {{last_name}}
+                {{/if}}
+
+                {{#if age}}
+                    , {{age}}
+                {{/if}}
+
+                {{#if city}}
+                    , <a href="/signees/{{city}}">{{city}}</a>
+                {{/if}}
+
+        {{/each}}
+</main>

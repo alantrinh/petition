@@ -1,0 +1,74 @@
+body {
+    font-family: helvetica, sans-serif
+}
+
+main {
+    text-align: center;
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+}
+
+canvas {
+    margin: 20px;
+    border: 1px solid black
+}
+
+p img {
+    border: 1px solid black;
+    width: 600px;
+    height: 200px;
+}
+
+.inline {
+  display: inline;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: serif;
+}
+.link-button:focus {
+  outline: none;
+}
+.link-button:active {
+  color:red;
+}
+
+.error {
+    color: red
+}
+
+nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        padding: 5px;
+        z-index: 1;
+}
+
+nav a, nav a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    color: grey;
+}
+
+a, a:visited {
+    color: blue;
+}
+
+label {
+    font-weight: bold;
+}

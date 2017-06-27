@@ -1,0 +1,31 @@
+<main>
+    <form method="POST">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+        <label>Email address<br />
+        <input type="text" name="email-address"></label><br />
+        <label>Password<br />
+        <input type="password" name="password"></label><br />
+        <button>Log In</button>
+    </form>
+
+    {{#if emailerror}}
+    <p class="error">No user found with email "{{email}}", please try again</p>
+    {{/if}}
+
+    {{#if passworderror}}
+        <p class="error">Password doesn't match
+        {{#if disable_login}}
+
+        {{else}}
+            , please try again
+        {{/if}}
+        </p>
+    {{/if}}
+
+    {{#if disable_login}}
+        <p class="error">Too many failed attempts. Please try again in 30 seconds</p>
+    {{/if}}
+
+    <p>Not yet registered? <a href="/register">Register here</a></p>
+</main>

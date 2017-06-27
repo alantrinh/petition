@@ -1,0 +1,20 @@
+<main>
+    <form method="POST">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+        <label>First name<br />
+        <input type="text" name="first-name"></label><br />
+        <label>Last name<br />
+        <input type="text" name="last-name"></label><br />
+        <label>Email address<br />
+        <input type="text" name="email-address"></label><br />
+        <label>Password<br />
+        <input type="password" name="password"></label><br />
+        <button>Register</button>
+    </form>
+    {{#if email-exists}}
+    <p class="error">Error creating account. Email already registered.</p>
+    {{/if}}
+
+    <a href="/login">Already registered? Click here</a>
+</main>

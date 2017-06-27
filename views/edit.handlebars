@@ -1,0 +1,27 @@
+<main>
+    <h1>Edit your profile</h1>
+    <form method="POST">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        Registered on {{timestamp}}
+        <p>
+        <label>First name<br/ >
+        <input type="text" name="first-name" value="{{first_name}}"></label><br/ >
+        <label>Last name<br/ >
+        <input type="text" name="last-name" value="{{last_name}}"></label><br/ >
+        <label>Email address</label><br/ >
+        <input type="text" name="email-address" value="{{email_address}}"></label><br/ >
+        <label>Password</label><br/ >
+        <input type="password" name="password"></label><br/ >
+        <label>Age</label><br/ >
+        <input type="text" name="age" value="{{age}}"></label><br/ >
+        <label>City</label><br/ >
+        <input type="text" name="city" value="{{city}}"></label><br/ >
+        <label>Homepage</label><br/ >
+        <input type="text" name="url" value={{url}}></label><br/ >
+        <button>Update</button>
+    </form>
+
+    {{#if email_exists}}
+        <p class="error">Unable to update, email already exists</p>
+    {{/if}}
+</main>
